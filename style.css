@@ -35,13 +35,13 @@ body::-webkit-scrollbar-thumb:hover {
 header{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 35px;
+  justify-content: space-around;
   padding: 10px;
   background: black;
   position: sticky;
   top: 0;
   z-index: 1000;
+  height: 75px;
 }
 .navbar{
   display: flex;
@@ -80,7 +80,19 @@ a:active, a:visited {
   transform: scale(1.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
 
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
 /* section */
 section{
   display: flex;
@@ -238,7 +250,7 @@ section{
   left: 50%;
   margin-left: -3px;
   z-index: -1;
-  animation: moveline 10s linear forwards;
+  animation: moveline 11s linear forwards;
 }
 @keyframes moveline{
   0%{
@@ -329,43 +341,6 @@ section{
   transition: 0.3s ease;
 }
 
-/* media queries */
-
-@media screen and (max-width: 600px){
-  .timeline{
-    margin: 50px auto;
-    width: 70%;
-  }
-  .timeline::after{
-    left: 31px;
-  }
-  .container{
-    width: 100%;
-    padding-left: 80px;
-    padding-right: 25px;
-  }
-  .text-box{
-    font-size: 13px;
-  }
-  .text-box small{
-    margin-bottom: 10px;
-  }
-  .left-container{
-    margin-left: 100px;
-  }
-  .right-container{
-    left: 0;
-  }
-  .left-container img, .right-container img{
-    left: 10px;
-  }
-  .left-container-arrow, .right-container-arrow{
-    border-right: 15px solid white;
-    border-left: 0;
-    left: -15px;
-  }
-}
-
 /* footer */
 footer{
   display: flex;
@@ -445,4 +420,158 @@ footer{
   font-size: 14px;
   margin-left: 120px;
   margin-bottom: 20px;
+}
+
+/* media queries */
+
+/* Mobile devices (max-width: 600px) */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
+  }
+  .navbar.active {
+    display: flex;
+    margin: 330px 0px 5px 0;
+  }
+  .navbar.active li{
+    padding: 3px 33px;
+  }
+  .logo img{
+    width: 100px;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav-button, .left button{
+    padding: 5px 10px 5px 10px;
+    font-size: 12px;
+    margin-right: 6px;
+  }
+  .navbar li {
+    margin: 15px 0;
+  }
+  .heading{
+    font-size: 24px;
+  }
+  .right img{
+    width: 109px;
+  }
+  .launch-time div p{
+    font-size: 20px;
+  }
+  .launch-time div span{
+    font-size: 10px;
+  }
+  .subheading{
+    font-size: 12px;
+  }
+  .event-heading{
+    font-size: 24px;
+  }
+  .timeline{
+    margin: 10px auto;
+    width: 70%;
+  }
+  .timeline::after{
+    left: 0px;
+  }  
+  .container{
+    width: 100%;
+    padding-left: 39px;
+    padding-right: 25px;
+  }
+  .text-box{
+    font-size: 13px;
+  }
+  .text-box small{
+    margin-bottom: 10px;
+  }
+  .left-container{
+    margin-left: 100px;
+  }
+  .right-container{
+    left: 0;
+  }
+  .left-container img, .right-container img{
+    left: -20px;
+  }
+  .left-container-arrow, .right-container-arrow{
+    border-right: 15px solid white;
+    border-left: 0;
+    left: -15px;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-footer {
+    width: 90%;
+    margin: 20px 0;
+    padding: 0 20px;
+  }
+  .left-footer h3 {
+    margin: 20px 143px 20px 0;
+    font-size: 20px;
+  }
+  .email-input {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .email-input input {
+    width: 74%;
+    margin: 0px 0;
+  }
+  .email-input span {
+    margin-top: 1px;
+}
+  .right-footer {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logos {
+    justify-content: flex-start;
+    margin: 20px 0;
+    gap: 20px;
+  }
+  .about, .certifications, .authorized {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .copyright {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 10px;
+  }
+}
+/* Tablets (max-width: 900px) */
+@media only screen and (max-width: 900px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
+  }
+  .navbar.active {
+    display: flex;
+  }
+  .logo img{
+    width: 100px;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav-button{
+    padding: 5px 10px 5px 10px;
+    font-size: 12px;
+  }
+  .navbar li {
+    margin: 15px 0;
+  }
+  .heading{
+    font-size: 24px;
+  }
 }
