@@ -548,7 +548,7 @@ footer{
   }
 }
 /* Tablets (max-width: 900px) */
-@media only screen and (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 1023px) {
   .navbar {
     display: none;
     flex-direction: column;
@@ -670,3 +670,75 @@ footer{
     font-size: 10px;
   }
 }
+/* Footer animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+footer {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.left-footer h3 {
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.email-input {
+  animation: fadeInLeft 2s ease-in-out;
+}
+
+.right-footer {
+  animation: fadeInRight 2s ease-in-out;
+}
+
+.logos {
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.about, .certifications, .authorized {
+  animation: fadeInUp 2.5s ease-in-out;
+}
+
+/* Responsive animations for mobile devices (max-width: 600px) */
+@media only screen and (max-width: 600px) {
+  .left-footer, .right-footer, .logos, .about, .certifications, .authorized {
+    animation: fadeInUp 1s ease-in-out;
+  }
+}
+
+/* Responsive animations for tablets (max-width: 900px) */
+@media (min-width: 601px) and (max-width: 1023px) {
+  .left-footer, .right-footer, .logos, .about, .certifications, .authorized {
+    animation: fadeInUp 1.5s ease-in-out;
+  }
+}
+
