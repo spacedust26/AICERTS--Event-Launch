@@ -557,6 +557,10 @@ footer{
   }
   .navbar.active {
     display: flex;
+    margin: 330px 0px 5px 0;
+  }
+  .navbar.active li{
+    padding: 3px 33px;
   }
   .logo img{
     width: 100px;
@@ -564,14 +568,105 @@ footer{
   .hamburger {
     display: flex;
   }
-  .nav-button{
-    padding: 5px 10px 5px 10px;
+  .nav-button, .left button{
+    padding: 8px 15px 8px 15px;
     font-size: 12px;
+    margin-right: 6px;
   }
   .navbar li {
     margin: 15px 0;
   }
   .heading{
-    font-size: 24px;
+    font-size: 40px;
+  }
+  .right img{
+    width: 250px;
+  }
+  .launch-time div p{
+    font-size: 30px;
+  }
+  .launch-time div span{
+    font-size: 14px;
+  }
+  .subheading{
+    font-size: 16px;
+  }
+  .event-heading{
+    font-size: 30px;
+  }
+  .timeline{
+    margin: 50px auto;
+    width: 75%;
+  }
+  .timeline::after{
+    left: 0px;
+  }  
+  .container{
+    width: 100%;
+    padding-left: 39px;
+    padding-right: 25px;
+  }
+  .text-box{
+    font-size: 13px;
+  }
+  .text-box small{
+    margin-bottom: 10px;
+  }
+  .left-container{
+    margin-left: 100px;
+  }
+  .right-container{
+    left: 0;
+  }
+  .left-container img, .right-container img{
+    left: -20px;
+  }
+  .left-container-arrow, .right-container-arrow{
+    border-right: 15px solid white;
+    border-left: 0;
+    left: -15px;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-footer {
+    width: 90%;
+    margin: 20px 0;
+    padding: 0 20px;
+  }
+  .left-footer h3 {
+    margin: 18px 186px 20px -307px;
+    font-size: 20px;
+}
+  .email-input {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .email-input input {
+    width: 74%;
+    margin: 0px 0;
+  }
+  .email-input span {
+    margin-top: 1px;
+}
+  .right-footer {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logos {
+    justify-content: flex-start;
+    margin: 20px 0;
+    gap: 20px;
+  }
+  .about, .certifications, .authorized {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .copyright {
+    margin: 15px 0;
+    text-align: center;
+    font-size: 10px;
   }
 }
